@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon_io/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <title>3D-Carousel</title>
+  </head>
+  <body>
+    
+    <div class="main">
+        
+      <div class="carousel-box">
+        <div class="nav">
+            <i class="ri-menu-line"></i>
+        </div>
+        <div class="row slider-center">
+          <i id="next" class="ri-arrow-right-s-line"></i>
+          <i id="prev" class="ri-arrow-left-s-line"></i>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel-item">
+            <img src="./images/1.gif" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/2.jfif" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/3.jpg" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/4.jfif" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/5.jfif" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/6.png" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/7.jpg" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/8.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".carousel").carousel({
+        //   fullWidth: true,
+          indicators: true,
+            duration: 100,
+        });
+
+        $("i#prev").click(function () {
+          $(".carousel").carousel("prev");
+        });
+
+        $("i#next").click(function () {
+          $(".carousel").carousel("next");
+        });
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
